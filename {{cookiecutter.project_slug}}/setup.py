@@ -10,7 +10,7 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 with open('requirements.txt') as requirements_file:
-    required = [package for package in requirements_file.read() if not package.startwiths("#")]
+    required = [package for package in requirements_file.read() if not package.startswith("#")]
 
 requirements = [
     {%- if cookiecutter.command_line_interface|lower == 'click' %}
