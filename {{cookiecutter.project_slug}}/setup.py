@@ -20,6 +20,13 @@ requirements = [
 ]
 
 requirements = requirements + required
+print("#"*50)
+print("#"*50)
+print("#"*50)
+print(requirements)
+print("#"*50)
+print("#"*50)
+print("#"*50)
 
 test_requirements = [
     # TODO: put package test requirements here
