@@ -3,19 +3,19 @@
 import argparse
 import sys
 import click
-
+from {{cookiecutter.project_slug}} import __version__ as version
 
 class {{cookiecutter.project_name|capitalize}}(object):
 
     def __init__(self):
         parser = argparse.ArgumentParser(
-        description='{{cookiecutter.project_short_description}}',
+        description='{{cookiecutter.project_short_description}} v{0}'.format(version),
         usage='''hello <command>
         example command : sample''')
         epilogue='''Credits :\n
-        {{cookiecutter.full_name}} '''.format(__version__)
+        {{cookiecutter.full_name}}'''
         parser.add_argument('command', help='Subcommand to run')
-        parser.add_argument('--version', help='Print version', action='version', version='microservice version {{ cookiecutter.version }}')
+        parser.add_argument('--version', help='Print version', action='version', version='microservice version {0}'.format(version))
         # parse_args defaults to [1:] for args, but you need to
         # exclude the rest of the args too, or validation will fail
         args = parser.parse_args(sys.argv[1:2])
