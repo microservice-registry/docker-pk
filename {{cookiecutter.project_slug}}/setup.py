@@ -9,12 +9,17 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
+with open('requirements.txt') as requirements_file:
+    required = requirements_file.read()
+
 requirements = [
     {%- if cookiecutter.command_line_interface|lower == 'click' %}
     'Click>=6.0',
     {%- endif %}
     # TODO: put package requirements here
 ]
+
+requirements = requirements + required
 
 test_requirements = [
     # TODO: put package test requirements here
