@@ -1,4 +1,4 @@
 FROM python:3-onbuild
 #WORKDIR /usr/src/app/
-RUN python setup.py install
+RUN pip install -e .
 CMD [ "{{ cookiecutter.project_slug }}" ]
