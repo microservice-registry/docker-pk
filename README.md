@@ -37,15 +37,13 @@ Then:
 
 For more details, see the [cookiecutter-pypackage tutorial](https://cookiecutter-pypackage.readthedocs.io/en/latest/tutorial.html).
 
-Not Exactly What You Want?
---------------------------
+## Not Exactly What You Want?
 
 Don't worry, you have options:
 
 Visit [microservice-registry](https://github.com/microservice-registry) for find more apps based on microservice projects template
 
-Fork This / Create Your Own
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Fork This / Create Your Own
 
 If you have differences in your preferred setup, I encourage you to fork this
 to create your own version. Or create your own; it doesn't strictly have to
@@ -57,8 +55,7 @@ be a fork.
 * It's up to you whether or not to rename your fork/own version. Do whatever
   you think sounds good.
 
-Or Submit a Pull Request
-~~~~~~~~~~~~~~~~~~~~~~~~
+### Or Submit a Pull Request
 
 I also accept pull requests on this, if they're small, atomic, and if they
 make my own packaging experience better.
