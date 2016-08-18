@@ -18,9 +18,7 @@ RUN \
 
 ENV TARGET=127.0.0.1
 
-ENV COMMAND=`{{ cookiecutter.docker_command }}`
-
 CMD \
     service tor start && \
     service polipo start && \
-    proxychains $COMMAND $TARGET
+    proxychains {{ cookiecutter.docker_command }} $TARGET
