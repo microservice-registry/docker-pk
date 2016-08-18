@@ -14,7 +14,7 @@ RUN \
   apt-get -y install polipo
 
 RUN \
-  apt-get -y install {{cookiecutter.tools}}
+  apt-get -y install {{cookiecutter.tool}}
 
 ENV TARGET=127.0.0.1
 
