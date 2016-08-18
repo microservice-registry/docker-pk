@@ -11,12 +11,12 @@
 ## Usages
 Get
 ```shell
-docker pull 4383/{{cookiecutter.project_slug | replace("_","-"):latest}}
+docker pull 4383/{{ cookiecutter.project_slug | replace("_","-") }}:latest
 ```
 
 Run
 ```shell
-docker run 4383/{{cookiecutter.project_slug | replace("_","-"):latest}}
+docker run 4383/{{ cookiecutter.project_slug | replace("_","-") }}:latest
 ```
 
 ## Features
