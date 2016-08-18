@@ -1,4 +1,26 @@
-FROM python:3-onbuild
-#WORKDIR /usr/src/app/
-RUN pip install -e .
-CMD [ "{{ cookiecutter.project_slug }}" ]
+############################################
+# director v0.1
+# author: Hervé Beraud
+# url: https://github.com/4383/director
+############################################
+FROM ubuntu:latest
+RUN \
+  apt-get update && \
+  apt-get -y upgrade
+
+RUN \
+  apt-get -y install tor && \
+  apt-get -y install proxychains && \
+  apt-get -y install polipo
+
+RUN \
+  apt-get -y install {{cookiecutter.tools}}
+
+ENV TARGET=127.0.0.1
+
+ENV {{ cookiecutter.project_slug|upper }}={{ cookiecutter.command }}
+
+CMD \
+    service tor start && \
+    service polipo start && \
+    proxychains {{ cookiecutter.project_slug }}
