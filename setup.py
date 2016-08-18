@@ -2,14 +2,14 @@
 
 from distutils.core import setup
 setup(
-    name='cookiecutter-pypackage',
+    name='Dockerized Pypackage',
     packages=[],
     version='0.1.0',
-    description='Cookiecutter template for a Python package',
-    author='Audrey Roy Greenfeld',
-    license='BSD',
-    author_email='aroy@alum.mit.edu',
-    url='https://github.com/audreyr/cookiecutter-pypackage',
+    description='Cookiecutter template for a Python dockerized package',
+    author='Hervé Beraud',
+    license='GPL',
+    author_email='herveberaud.pro@gmail.com',
+    url='https://github.com/4383/dockerized-pypackage',
     keywords=['cookiecutter', 'template', 'package', ],
     classifiers=[
         'Development Status :: 4 - Beta',
