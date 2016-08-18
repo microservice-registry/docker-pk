@@ -15,7 +15,7 @@ class {{cookiecutter.project_name|capitalize}}(object):
         epilogue='''Credits :\n
         {{cookiecutter.full_name}} '''.format(__version__)
         parser.add_argument('command', help='Subcommand to run')
-        parser.add_argument('--version', help='Print version', action='version', version='microservice version {version}'.format(version=__version__))
+        parser.add_argument('--version', help='Print version', action='version', version='microservice version {{ cookiecutter.version }}')
         # parse_args defaults to [1:] for args, but you need to
         # exclude the rest of the args too, or validation will fail
         args = parser.parse_args(sys.argv[1:2])
