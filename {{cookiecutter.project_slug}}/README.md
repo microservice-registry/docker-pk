@@ -25,5 +25,5 @@ docker run 4383/{{ cookiecutter.project_slug | replace("_","-") }}:latest
 
 ## Credits
 
-This package was created with (Cookiecutter)[https://github.com/audreyr/cookiecutter] 
-and the (microservice-registry/docker-pk)[https://github.com/microservice-registry/docker-pk] project template.
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter)
+and the [microservice-registry/docker-pk](https://github.com/microservice-registry/docker-pk) project template.
