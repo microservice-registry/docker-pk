@@ -14,4 +14,5 @@ script:
     - mkdir docker-pk && cd docker-pk
     - cookiecutter --no-input https://github.com/microservice-registry/docker-pk
     - pwd
+    - cat python_dockerized_app/Dockerfile
     - ls
