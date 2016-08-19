@@ -1,25 +1,30 @@
+sudo: required
+
+services:
+    - docker
+    - git
 language: python
-
+#
 python: 3.5
-env:
-  - TOXENV=py27
-  - TOXENV=py33
-  - TOXENV=py34
-  - TOXENV=py35
-
+#env:
+#  - TOXENV=py35
+#  - TOXENV=py27
+#  - TOXENV=py33
+#  - TOXENV=py34
+#
 install:
-  - pip install -U tox
-
+    - pip install -U cookiecutter
+#
 script:
-  - tox
-
-deploy:
-  provider: pypi
-  distributions: sdist
-  user: audreyr
-  password:
-    secure: PLEASE_REPLACE_ME
-  on:
-    tags: true
-    repo: audreyr/python_boilerplate
-    condition: $TOXENV == py27
+    - cookicutter https://github.com/microservice-registry/docker-pk
+#
+#deploy:
+#  provider: pypi
+#  distributions: sdist
+#  user: audreyr
+#  password:
+#    secure: PLEASE_REPLACE_ME
+#  on:
+#    tags: true
+#    repo: audreyr/python_boilerplate
+#    condition: $TOXENV == py27
