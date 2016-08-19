@@ -18,6 +18,9 @@ install:
 script:
     - cookiecutter https://github.com/microservice-registry/docker-pk --no-input \
       && ls
+
+after_sucess:
+    - cd docker-pk && docker build -t scan .
 #
 #deploy:
 #  provider: pypi
