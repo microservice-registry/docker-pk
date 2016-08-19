@@ -2,33 +2,16 @@ sudo: required
 
 services:
     - docker
-    - git
+
 language: python
-#
+
 python: 3.5
-#env:
-#  - TOXENV=py35
-#  - TOXENV=py27
-#  - TOXENV=py33
-#  - TOXENV=py34
-#
+
 install:
     - pip install -U cookiecutter
-#
-script:
-    - cookiecutter --no-input https://github.com/microservice-registry/docker-pk
-    - ls
 
-after_sucess:
-    - cd docker-pk && docker build -t scan .
-#
-#deploy:
-#  provider: pypi
-#  distributions: sdist
-#  user: audreyr
-#  password:
-#    secure: PLEASE_REPLACE_ME
-#  on:
-#    tags: true
-#    repo: audreyr/python_boilerplate
-#    condition: $TOXENV == py27
+script:
+    - mkdir docker-pk && cd docker-pk
+    - cookiecutter --no-input https://github.com/microservice-registry/docker-pk
+    - pwd
+    - ls
