@@ -16,8 +16,8 @@ install:
     - pip install -U cookiecutter
 #
 script:
-    - cookiecutter https://github.com/microservice-registry/docker-pk --no-input \
-      && ls
+    - cookiecutter --no-input https://github.com/microservice-registry/docker-pk
+    - ls
 
 after_sucess:
     - cd docker-pk && docker build -t scan .
