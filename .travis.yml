@@ -16,7 +16,7 @@ install:
     - pip install -U cookiecutter
 #
 script:
-    - cookicutter https://github.com/microservice-registry/docker-pk
+    - cookiecutter https://github.com/microservice-registry/docker-pk
 #
 #deploy:
 #  provider: pypi
